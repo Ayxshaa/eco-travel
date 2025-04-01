@@ -1,3 +1,54 @@
+/* index.css */
+
+/* Base styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom classes for the Navbar component */
+@layer components {
+  .navbar {
+    @apply flex items-center justify-between px-8 py-4 bg-gradient-to-r from-teal-600 to-blue-900;
+  }
+
+  .navbar-logo {
+    @apply text-white text-2xl font-bold;
+  }
+
+  .navbar-links {
+    @apply flex space-x-8 hidden md:flex;
+  }
+
+  .navbar-link {
+    @apply text-white hover:text-gray-200 transition-colors;
+  }
+
+  .navbar-link-active {
+    @apply border-b-2 border-white pb-1;
+  }
+
+  .navbar-right {
+    @apply flex items-center space-x-4;
+  }
+
+  .navbar-search-button {
+    @apply text-white p-1;
+  }
+
+  .navbar-language-selector {
+    @apply flex items-center text-white cursor-pointer;
+  }
+
+  /* Custom classes for the DesSearch component */
+  .des-search {
+    @apply flex items-center justify-between px-8 py-4 bg-white shadow-md;
+  }
+
+  .des-search-button {
+    @apply bg-blue-900 text-white px-4 py-2 rounded;
+  }
+
+  .des-search-icon-text {
+    @apply flex items-center space-x-2;
+  }
+}
